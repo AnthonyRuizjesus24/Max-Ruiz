@@ -1,21 +1,73 @@
 ---
-const pageTitle = "Sobre mi";
+import Footer from '../components/Footer.astro';
+import '../../src/styles/global.css'
+import Navigation from '../components/Navigation.astro';
+const pageTitle = "MAx ruiz";
+
+const identity = {
+  firstName: "Max",
+  country: "Peru",
+  occupation: "Futuro Desarrollador",
+  hobbies: ["boxeo", "Manejar Moto", "Universitario"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+
+const operatingSystem = "Linux";
+const quantity = 3;
+const footwear = "botas";
+const student = false;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+
+    <style define:vars={{ skillColor: "rgb(255, 69, 0)", fontWeight: 600, textCase: "uppercase" }}>
+        h1 {
+            color: rgb(0, 124, 128);
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+        .skill {
+            color: var(--skillColor);
+            font-weight: var(--fontWeight);
+            text-transform: var(--textCase);
+            margin-bottom: 0.5rem;
+        }
+    </style>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
-    <h1>Sobre mi</h1>
+    <Navigation />
+    <h1>{pageTitle}</h1>
     <h2>... ¡y mi nuevo sitio Astro!</h2>
 
     <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
 
     <p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!</p>
+    
   </body>
+
+  <p>He aquí algunos datos sobre mí:</p>
+    <ul>
+    <li>Me llamo {identity.firstName}.</li>
+    <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+    {identity.hobbies.length >= 2 &&
+        <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[2]}</li>
+    }
+    <p>Mis habilidades son:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+
+    <p>{operatingSystem}</p>
+    {student && <p>Sigo estudiando.</p>}
+    <p>Tengo {quantity + 8} pares de {footwear}</p>
+    {operatingSystem === "Linux" ? <p>Utilizo un Mac.</p> : <p>No utilizo un Mac.</p>}
+    <Footer/>
 </html>

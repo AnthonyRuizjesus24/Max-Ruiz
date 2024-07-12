@@ -4,7 +4,9 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 ---
 <BaseLayout pageTitle='Página de inicio'>
   <h2>Mi impresionante subtítulo del blog</h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>

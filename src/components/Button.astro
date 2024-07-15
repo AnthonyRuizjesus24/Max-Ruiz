@@ -1,0 +1,30 @@
+<!-- src/components/Button.astro -->
+<button class="custom-button" id="comoViajarButton">
+  Tickets de entrada
+  </button>
+  
+  <style>
+    .custom-button {
+      padding: 15px 30px; /* Aumenta el padding para agrandar el botón */
+      background-color: #6f7479;
+      color: #fff;
+      border: none;
+      border-radius: 8px; /* Ajusta el radio de borde para un aspecto más redondeado */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1.2rem; /* Aumenta el tamaño de fuente */
+      font-weight: bold; /* Añade negrita al texto */
+      text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    }
+  
+    .custom-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  
+  <script>
+    document.getElementById('comoViajarButton').addEventListener('click', function() {
+      window.location.href = 'https://www.getyourguide.es/-l1570/-tc123/?cmp=bing&ad_id=78271683049827&adgroup_id=1252344367036601&bid_match_type=bb&campaign_id=434041828&device=c&feed_item_id=&keyword=location_id%3D1570&loc_interest_ms=148&loc_physical_ms=145508&match_type=b&msclkid=c5ff9f79f3ca19b24f58f9eccc222541&network=o&partner_id=CD951&target_id=dat-2330071297928108&utm_adgroup=lc%3D1570%3Amachu%20picchu%7Cfn%3Df1%7Cagt%3Ddsa&utm_campaign=dc%3D15%3Ape%7Clc%3D1570%3Amachu%20picchu%7Cct%3Dcore%7Cln%3D109%3Aes%7Ctc%3Dall&utm_keyword=location_id%3D1570&utm_medium=paid_search&utm_query=precio%20de%20entrada%20a%20machu%20picchu&utm_source=bing';
+    });
+  </script>
+  

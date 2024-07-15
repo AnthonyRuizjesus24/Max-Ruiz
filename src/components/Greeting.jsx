@@ -1,17 +1,29 @@
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 
-export default function Greeting({messages}) {
+export default function Greeting() {
+  const getGreeting = () => {
+    const currentHour = new Date().getHours();
+    if (currentHour < 12) {
+      return "Buenos días";
+    } else if (currentHour < 18) {
+      return "Buenas tardes";
+    } else {
+      return "Buenas noches";
+    }
+  };
 
-  const randomMessage = () => messages[(Math.floor(Math.random() * messages.length))];
+  const [greeting, setGreeting] = useState(getGreeting());
 
-  const [greeting, setGreeting] = useState(messages[0]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGreeting(getGreeting());
+    }, 60000); // Actualiza el saludo cada minuto
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
       <h3>{greeting} ¡Gracias por tu visita!</h3>
-      <button onClick={() => setGreeting(randomMessage())}>
-        Nuevo saludo
-      </button>
     </div>
   );
 }

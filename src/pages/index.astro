@@ -2,11 +2,15 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-
+import '../components/Style-Machu-Picchu.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
+import Button from '../components/Button.astro';
+import MachuPicchuInfo from '../components/react/MachuPicchuInfo';
 ---
 <BaseLayout pageTitle='Página de inicio'>
-  <h2>Mi impresionante subtítulo del blog</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <Greeting />
+  <img src="/inicio.jpg" alt="Peru" class="custom-image" />
+  <Button />
+  <MachuPicchuInfo />
 </BaseLayout>

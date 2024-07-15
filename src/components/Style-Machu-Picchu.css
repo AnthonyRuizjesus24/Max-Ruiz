@@ -1,0 +1,42 @@
+.train-image {
+  max-width: 35%; /* Ajusta el tamaño máximo de la imagen al contenedor */
+  height: auto; /* Ajusta la altura automáticamente proporcionalmente al ancho */
+  display: block; /* Para evitar espacios no deseados */
+  margin-top: 10px; /* Ajusta el margen superior según necesites */
+}
+.bus-image {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+.caminando-image {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+.templo-image {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+.plaza-sagrada-image {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+.roca-sagrada-image {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+.intihuatana {
+  max-width: 35%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}

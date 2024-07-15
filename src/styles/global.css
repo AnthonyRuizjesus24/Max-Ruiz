@@ -97,22 +97,22 @@ html {
 .expanded {
   display: unset;
 }
-.image-container {
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
-  padding: 20px; /* Espacio alrededor del contenedor */
-  background-color: #fffefe; /* Color de fondo del contenedor */
-  border-radius: 10px; /* Bordes redondeados del contenedor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
-}
+
 /* Estilos para pantallas grandes */
 .custom-image {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  max-width: 100%; /* Asegura que la imagen no se estire más allá de su tamaño original */
-  border-radius: 10px; /* Añade un borde redondeado opcional */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra opcional */
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+  display: block; /* Hace que la imagen sea un bloque para manejar el margen correctamente */
+  border-radius: 8px; /* Añade un borde redondeado para un aspecto más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+  cursor: pointer;
+}
+
+.custom-image:hover {
+  transform: scale(1.1); /* Escala la imagen al 110% en el hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta ligeramente la sombra al hover */
+  margin: 50px;
+  margin-bottom: 50px;
 }
 
 /* Estilos responsivos para pantallas pequeñas */

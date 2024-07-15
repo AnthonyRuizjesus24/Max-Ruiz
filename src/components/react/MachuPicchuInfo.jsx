@@ -5,6 +5,7 @@ import React from 'react';
 const MachuPicchuInfo = () => {
   return (
     <>
+    
       <h2>MACHU PICCHU MARAVILLA DEL MUNDO</h2>
       <p>
         Machu Picchu es una antigua ciudad inca ubicada en lo alto de los Andes peruanos.

@@ -4,24 +4,12 @@ import '../../src/styles/global.css'
 import BlogPost from '../components/BlogPost.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = await Astro.glob('../pages/post/*.md');
+
 ---
 
-<BaseLayout pageTitle='Blog'>
+<BaseLayout pageTitle='Lugares'>
   
   <h1>Mi blog de Astro aprendizaje</h1>
-  <ul>
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-  </ul>
-  
+    adsadasds
 </BaseLayout>
 
-<!-- <html lang="es">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro</title>
-  </head>
-  <body>
-   
-  </body>
-</html> -->

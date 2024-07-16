@@ -1,3 +1,4 @@
+
 html.dark {
   background-color: #0d0d0e;
   color: #fff;
@@ -137,6 +138,46 @@ html {
   }
   .hamburger {
     display: none;
-  } 
+  }   
+}
+.places-list {
+  margin-top: 80px; /* Espacio arriba del contenedor */
+  text-decoration: none;
+}
 
+.places-list ul li {
+  margin-bottom: 40px; /* Espacio entre elementos de lista */
+  text-decoration: none;
+}
+.places-list ul {
+  list-style: none; /* Elimina los estilos de lista por defecto */
+  padding: 0; /* Elimina el relleno interno de la lista */
+}
+
+.place-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #333; /* Color del texto */
+  position: relative; /* Posición relativa para alinear elementos internos */
+}
+
+.place-item img {
+  width: 50%; /* Imagen ocupa todo el ancho del contenedor */
+  max-width: 50%; /* Ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  
+}
+
+.place-title {
+  position: block; /* Posición absoluta para alinear sobre la imagen */
+  top: 0px; /* Desplaza el título hacia arriba */
+  left: 0; /* Alinea el título a la izquierda */
+  width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  color: rgb(5, 5, 5); /* Color del texto del título */
+  padding: 10px; /* Espaciado interno del título */
+  transform: translateY(-100%); /* Mueve el título hacia arriba fuera de la imagen */
+  transition: transform 0.3s ease; /* Transición suave */
 }

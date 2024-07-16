@@ -2,43 +2,66 @@
 
 <button class="custom-button" id="ticketsdeentradaButton">
   Tickets de entrada
+  <span class="plane">✈️</span>
 </button>
 
 <style>
   .custom-button {
-    padding: 12px 24px; /* Ajusta el padding para un tamaño más equilibrado */
-    background-color: #664caf; /* Cambia el color de fondo a verde */
+    padding: 12px 24px;
+    background-color: #664caf;
     color: #fff;
     border: none;
-    border-radius: 6px; /* Reduce el radio del borde para un aspecto más suave */
+    border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1rem; /* Reduce el tamaño de fuente para dispositivos móviles */
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
-    display: block; /* Hace que el botón ocupe el ancho completo disponible */
-    margin: 10px auto; /* Centra el botón y añade un espacio uniforme alrededor */
-    width: 80%; /* Ajusta el ancho del botón para dispositivos móviles */
-    max-width: 300px; /* Limita el ancho máximo del botón */
-    text-align: center; /* Centra el texto dentro del botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    position: relative; /* Añadido para posicionar el avión */
+    overflow: hidden; /* Añadido para ocultar el avión al salir */
   }
 
   .custom-button:hover {
-    background-color: #585c58; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #585c58;
   }
 
   @media (min-width: 768px) {
     .custom-button {
-      width: auto; /* Vuelve a un ancho automático para pantallas más grandes */
-      padding: 15px 30px; /* Ajusta el padding para un tamaño más grande en desktop */
-      font-size: 1.2rem; /* Restaura el tamaño de fuente para desktop */
+      width: auto;
+      padding: 15px 30px;
+      font-size: 1.2rem;
     }
+  }
+
+  .plane {
+    display: inline-block;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease-in-out;
+    font-size: 1.2rem; /* Ajusta el tamaño del avión */
+  }
+
+  .animate-plane {
+    transform: translate(200%, -50%);
   }
 </style>
 
 <script>
   document.getElementById('ticketsdeentradaButton').addEventListener('click', function() {
-    window.location.href = 'https://www.getyourguide.es/-l1570/-tc123/?cmp=bing&ad_id=78271683049827&adgroup_id=1252344367036601&bid_match_type=bb&campaign_id=434041828&device=c&feed_item_id=&keyword=location_id%3D1570&loc_interest_ms=148&loc_physical_ms=145508&match_type=b&msclkid=c5ff9f79f3ca19b24f58f9eccc222541&network=o&partner_id=CD951&target_id=dat-2330071297928108&utm_adgroup=lc%3D1570%3Amachu%20picchu%7Cfn%3Df1%7Cagt%3Ddsa&utm_campaign=dc%3D15%3Ape%7Clc%3D1570%3Amachu%20picchu%7Cct%3Dcore%7Cln%3D109%3Aes%7Ctc%3Dall&utm_keyword=location_id%3D1570&utm_medium=paid_search&utm_query=precio%20de%20entrada%20a%20machu%20picchu&utm_source=bing';
+    var plane = this.querySelector('.plane');
+    plane.classList.add('animate-plane');
+    
+    // Redirige después de la animación
+    setTimeout(function() {
+      window.location.href = 'https://www.getyourguide.es/-l1570/-tc123/?cmp=bing&ad_id=78271683049827&adgroup_id=1252344367036601&bid_match_type=bb&campaign_id=434041828&device=c&feed_item_id=&keyword=location_id%3D1570&loc_interest_ms=148&loc_physical_ms=145508&match_type=b&msclkid=c5ff9f79f3ca19b24f58f9eccc222541&network=o&partner_id=CD951&target_id=dat-2330071297928108&utm_adgroup=lc%3D1570%3Amachu%20picchu%7Cfn%3Df1%7Cagt%3Ddsa&utm_campaign=dc%3D15%3Ape%7Clc%3D1570%3Amachu%20picchu%7Cct%3Dcore%7Cln%3D109%3Aes%7Ctc%3Dall&utm_keyword=location_id%3D1570&utm_medium=paid_search&utm_query=precio%20de%20entrada%20a%20machu%20picchu&utm_source=bing';
+    }, 500); // Duración de la animación en milisegundos
   });
 </script>

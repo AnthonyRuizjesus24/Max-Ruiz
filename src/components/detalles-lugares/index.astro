@@ -1,0 +1,88 @@
+<main>
+    
+    <div class="responsive-container">
+      <section class="info">
+        <h2>Información sobre Lugares</h2>
+        <p>Descubre los mejores lugares turísticos de Perú. Desde la histórica ciudad de Cusco hasta las maravillas naturales de la Amazonía.</p>
+      </section>
+      <section class="gallery">
+          <h2>Lago Titicaca</h2>
+          <img src="/lago-titicaca-1.jpg" alt="Imagen 1" />
+          <p>
+            Este cuerpo de agua (que es el lago navegable a mayor altura en el mundo) se encuentra en el altiplano andino, a 3812  m.s.n.m.,  y un 56 % de su superficie de 8562 km2 pertenece a Perú, siendo boliviano el restante 44 %.
+            La principal ciudad peruana a orillas del lago es Puno, capital del departamento de igual nombre, con una población mayoritariamente indígena.
+          </p>
+          <p>
+            Una de las principales actividades puneñas es la pesca en caballitos de totora, hechas con este junco acuático. La totora también es utilizada por los indígenas uros para hacer sus famosas islas artificiales flotantes. Estas islas se fabrican superponiendo varias capas de totora tejida en esteras, sobre las cuales va una sencilla vivienda de una sola habitación.
+          </p>
+          <p>
+            Las principales actividades turísticas en el Titicaca son pasear en barco y en caballitos de totora, visitar las islas y practicar la pesca deportiva. En el lago hay 42 islas naturales, siendo Amantani, de 9.3 km2, la más grande de Perú.
+          </p>
+          <p>
+            En las islas lacustres, incluyendo las artificiales, viven comunidades ancestrales que han conservado sus costumbres y rasgos culturales.
+          </p>
+          <p>
+            La ciudad de Puno es una de las más alegres de Perú y su Fiesta de La Candelaria fue declarada Patrimonio Cultural de la Humanidad. Participan unos 40000 danzantes y cerca de 9000 músicos.
+          </p>
+          <p>
+            Aprecia a continuación este fenomenal lago:
+          </p>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g14JIql5eMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
+      
+    </div>
+  </main>
+
+<style>
+    /* global.css o el archivo CSS que estés utilizando */
+.gallery {
+  text-align: center; /* Centrar el contenido horizontalmente */
+  padding: 20px; /* Añadir un poco de espacio alrededor de la sección */
+  background-color: #f9f9f9; /* Color de fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.gallery h2 {
+  font-size: 2em; /* Tamaño de fuente más grande */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  color: #333; /* Color del texto */
+}
+
+.gallery img {
+  width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
+  /* max-width: 600px;  */
+  height: 600px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  margin: top 1px px;
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Ampliar la imagen ligeramente al hacer hover */
+  cursor: pointer;
+}
+.gallery p {
+  text-align: justify;
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>

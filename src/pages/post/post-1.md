@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Mi primera publicación en el blog'
-pubDate: 2022-07-01
-description: 'Este es la primera publicación de mi nuevo blog de Astro.'
+title: 'Explorando Machu Picchu'
+pubDate: 2024-07-15
+description: 'Una guía detallada sobre la maravilla antigua de Machu Picchu en Perú.'
 author: 'Alumno de Astro'
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'El logotipo completo de Astro.'
-tags: ["astro", "tech", "static-site"]
+    url: '/inicio.jpg'
+    alt: 'Vista panorámica de Machu Picchu.'
+tags: ["turismo", "Perú", "Machu Picchu"]
 ---

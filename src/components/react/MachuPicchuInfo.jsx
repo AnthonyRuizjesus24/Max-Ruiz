@@ -19,15 +19,15 @@ const MachuPicchuInfo = () => {
         <ul>
           <li>
             <strong>Tren:</strong> La forma más popular es tomar un tren desde Cusco o el Valle Sagrado hasta Aguas Calientes, el pueblo más cercano a Machu Picchu.
-            <img src="/tren.jpg" alt="Tren a Machu Picchu" className="train-image"/>
+            <img src="/imagen/tren.jpg" alt="Tren a Machu Picchu" className="train-image"/>
           </li>
           <li>
             <strong>Caminata:</strong> Para los más aventureros, hay varias rutas de senderismo, siendo la más famosa el Camino Inca, que dura entre 2 a 5 días.
-            <img src="caminando.jpg" alt="Caminando a Machu Picchu" className="caminando-image"/>
+            <img src="/imagen/caminando.jpg" alt="Caminando a Machu Picchu" className="caminando-image"/>
           </li>
           <li>
             <strong>Bus:</strong> Desde Aguas Calientes, puedes tomar un bus que te llevará hasta la entrada de Machu Picchu.
-            <img src="/bus.jpg" alt="Bus a Machu Picchu" className="bus-image"/>
+            <img src="/imagen/bus.jpg" alt="Bus a Machu Picchu" className="bus-image"/>
           </li>
         </ul>
       </p>
@@ -38,19 +38,19 @@ const MachuPicchuInfo = () => {
         <ul>
           <li>
             <strong>El Templo del Sol:</strong> Un importante templo religioso con una impresionante vista del valle.
-            <img src="templo_del_sol.jpg" alt="Templo del Sol" className="templo-image"/>
+            <img src="../imagen/templo_del_sol.jpg" alt="Templo del Sol" className="templo-image"/>
           </li>
           <li>
             <strong>La Plaza Sagrada:</strong> Un área central donde se realizaban ceremonias y reuniones.
-            <img src="plaza-sagrada.jpg" alt="Plaza Sagrada" className="plaza-sagrada-image"/>
+            <img src="../imagen/plaza-sagrada.jpg" alt="Plaza Sagrada" className="plaza-sagrada-image"/>
           </li>
           <li>
             <strong>La Roca Sagrada:</strong> Una piedra ceremonial que se cree tenía importancia espiritual.
-            <img src="roca-sagrada.jpg" alt="Roca Sagrada" className="roca-sagrada-image"/>
+            <img src="../imagen/roca-sagrada.jpg" alt="Roca Sagrada" className="roca-sagrada-image"/>
           </li>
           <li>
             <strong>El Intihuatana:</strong> Un reloj solar que se utilizaba para marcar los solsticios y equinoccios.
-            <img src="intihuatana.jpg" alt="Intihuatana" className="intihuatana"/>
+            <img src="../imagen/intihuatana.jpg" alt="Intihuatana" className="intihuatana"/>
           </li>
         </ul>
       </p>

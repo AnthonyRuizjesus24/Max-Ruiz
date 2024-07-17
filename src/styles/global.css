@@ -100,28 +100,8 @@ html {
 }
 
 /* Estilos para pantallas grandes */
-.custom-image {
-  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
-  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
-  display: block; /* Hace que la imagen sea un bloque para manejar el margen correctamente */
-  border-radius: 8px; /* Añade un borde redondeado para un aspecto más suave */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
-  cursor: pointer;
-}
 
-.custom-image:hover {
-  transform: scale(1.1); /* Escala la imagen al 110% en el hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta ligeramente la sombra al hover */
-  margin: 50px;
-  margin-bottom: 50px;
-}
 
-/* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 600px) {
-  .image-container {
-    padding: 10px; /* Ajusta el relleno para pantallas más pequeñas */
-  }
-}
 
 @media screen and (min-width: 636px) {
   .nav-links {
@@ -180,4 +160,57 @@ html {
   padding: 10px; /* Espaciado interno del título */
   transform: translateY(-100%); /* Mueve el título hacia arriba fuera de la imagen */
   transition: transform 0.3s ease; /* Transición suave */
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin-top: 0px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aumentado a 200px para más espacio */
+  gap: 20px; /* Aumentado a 20px para mayor separación */
+  margin-top: 50px;
+  padding: 20px; /* Añadido padding para dar espacio alrededor del collage */
+}
+
+.custom-image {
+  width: 100%;
+  height: 400px; /* Tamaño fijo de altura para todas las imágenes */
+  object-fit: cover; /* Para que las imágenes se ajusten dentro del contenedor */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos */
+  cursor: pointer;
+  margin-bottom: 20px; /* Añadido margen inferior para mayor separación entre filas */
+}
+
+.custom-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 600px) {
+  .collage {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px; /* Ajustado para dispositivos móviles */
+  }
+
+  .custom-image {
+    height: 200px; /* Altura reducida para dispositivos móviles */
+  }
 }

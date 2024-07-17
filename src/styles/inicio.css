@@ -1,0 +1,126 @@
+html.dark {
+    background-color: #0d0d0e;
+    color: #fff;
+  }
+  
+  .dark .nav-links a {
+    color: #fff;
+  }
+  html {
+      background-color: #f1f5f9;
+      font-family: sans-serif;
+    }
+    
+    body {
+        background-image: url('fondo-inicio.jpg'); /* Cambia esto a la ruta de tu imagen */
+       /* background-size: cover;  Hace que la imagen cubra toda la página */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        min-height: 100vh; /* Mínimo alto del body para cubrir toda la altura visible del viewport */
+        display: flex; /* Usa flexbox para centrar el contenido verticalmente */
+        justify-content: center; /* Centra verticalmente el contenido */
+        align-items: center; /* Centra horizontalmente el contenido */
+        color: #fff; /* Color de texto blanco (opcional, para mejorar la legibilidad sobre el fondo) */
+        font-family: Arial, sans-serif; /* Tipo de fuente (opcional, ajusta según tus preferencias) */
+      }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      margin: 1rem 0;
+      font-size: 2.5rem;
+    }
+    /* estilos de la barra de navegación*/
+    .hamburger {
+      padding: 10px;
+      cursor: pointer;
+      border: 2px solid #333;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 50px;
+      height: 40px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .hamburger:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .hamburger .line {
+      width: 100%;
+      height: 4px;
+      background-color: #333;
+      transition: background-color 0.3s ease;
+    }
+    
+    .hamburger:hover .line {
+      background-color: #0e0d0d;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     /*background-color: #b9b9be; */
+    }
+    
+  .nav-links {
+    justify-content: space-between; /* Distribuye los enlaces de manera uniforme */
+    align-items: center; /* Centra verticalmente los enlaces */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    /* background-color: #ff9776; */
+    display: none;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px; /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+  }
+  
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: #0056b3;
+  }
+  
+  .expanded {
+    display: unset;
+  }
+  
+  /* Estilos para pantallas grandes */
+  
+  
+  
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+    .hamburger {
+      display: none;
+    }   
+  }

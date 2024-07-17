@@ -2,6 +2,7 @@
 import '../../src/styles/global.css';
 import Header from '../components/Header.astro';
 const pageTitle = "Lugares";
+import Greeting from '../components/Greeting';
 ---
 
 <html lang="es">
@@ -12,13 +13,14 @@ const pageTitle = "Lugares";
   </head>
   <body>
     <Header />
+    <Greeting />
     <h1>{pageTitle}</h1>
     <div class="places-list">
         <ul>
           <li>
               <a href="/machu-picchu" class="place-item">
                 <span class="place-title">Machu Picchu</span>
-                <img src="/inicio.jpg" alt="Lugar 1" />
+                <img src="../imagen/inicio.jpg" alt="Lugar 1" />
             </a>
           </li>
           <li>
